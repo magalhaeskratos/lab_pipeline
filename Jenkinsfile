@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build Image') {
       steps {
-        sh 'docker build -t kaioaresi/jenkins:${tag_img} .'
+        sh 'docker build -t kaioaresi/jenkins:${tag_img}'
       }
     }
   }
