@@ -8,8 +8,7 @@ pipeline {
     }
     stage('Push image') {
       steps {
-        sh 'docker login -u ${DOCKER_USERNAME} -p "${DOCKER_PASSWORD}"'
-        sh 'docker push kaioaresi/jenkins_teste:${tag_img}'
+        sh 'docker container run -d -p 8080:8080 kaioaresi/jenkins_teste:${tag_img}'
       }
     }
   }
