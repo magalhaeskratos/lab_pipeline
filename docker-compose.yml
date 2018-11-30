@@ -1,0 +1,8 @@
+version: '3.6'
+
+services:
+    jenkins:
+      image: cedrotechnologies/jenkins:${tag_img}
+      ports:
+        - "8080:8080"
+        - "50000:50000"
