@@ -6,9 +6,9 @@ pipeline {
         sh 'docker build -t kaioaresi/jenkins_teste:${tag_img} .'
       }
     }
-    stage('Up stack') {
+    stage('Stack update') {
       steps {
-        sh 'docker container run -d -p 8080:8080 kaioaresi/jenkins_teste:${tag_img}'
+        sh 'echo $JOB_NAME'
       }
     }
   }
