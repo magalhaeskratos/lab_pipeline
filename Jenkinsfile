@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Stack update') {
       steps {
-        sh 'echo $JOB_NAME'
+        sh 'echo "$JOB_NAME" | sed \'s#/.*##g\''
       }
     }
   }
