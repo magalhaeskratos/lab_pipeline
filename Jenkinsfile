@@ -8,7 +8,10 @@ pipeline {
     }
     stage('Stack update') {
       steps {
-        sh 'echo "$JOB_NAME" | sed \'s#/.*##g\''
+        sh '''stack_name =$(echo "$JOB_NAME" | sed \'s#/.*##g\')
+
+echo $stack_name
+'''
       }
     }
   }
