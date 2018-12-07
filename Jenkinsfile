@@ -3,15 +3,9 @@ pipeline {
   stages {
     stage('Build Image') {
       steps {
-        sh 'docker build -t kaioaresi/jenkins_teste:${tag_img} .'
-      }
-    }
-    stage('Stack update') {
-      steps {
-        sh '''stack_name =$(echo "$JOB_NAME" | sed \'s#/.*##g\')
+        sh '''#docker build -t kaioaresi/jenkins_teste:${tag_img} .
 
-echo $stack_name
-'''
+docker --version'''
       }
     }
   }
