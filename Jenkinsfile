@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Built image') {
+    stage('Build image') {
       steps {
         sh 'docker build -t teste/jenkins:${TAG_DEV} .'
       }
