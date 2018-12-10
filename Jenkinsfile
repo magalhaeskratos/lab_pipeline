@@ -3,13 +3,8 @@ pipeline {
   stages {
     stage('Build Image') {
       steps {
-        sh '''#docker build -t kaioaresi/jenkins_teste:${tag_img} .
-
-docker --version'''
+        sh 'docker build -t kaioaresi/jenkins_teste:${TAG_DEV} .'
       }
     }
-  }
-  environment {
-    tag_img = 'development'
   }
 }
