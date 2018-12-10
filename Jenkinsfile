@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build image') {
       steps {
-        sh 'docker build -t teste/jenkins:${TAG_DEV} .'
+        sh 'docker build -t kaioaresi/jenkins:${TAG_DEV} .'
       }
     }
     stage('Docker push') {
