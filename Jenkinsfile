@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Built image') {
       steps {
-        sh 'docker built -t teste/jenkins:${TAG_DEV} .'
+        sh 'docker build -t teste/jenkins:${TAG_DEV} .'
       }
     }
   }
