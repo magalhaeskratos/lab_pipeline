@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
     jenkins:
-      image: cedrotechnologies/jenkins:development
+      image: kaioaresi/jenkins:development
       ports:
         - "8080:8080"
         - "9090:50000"
