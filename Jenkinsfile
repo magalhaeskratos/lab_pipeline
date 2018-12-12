@@ -6,11 +6,6 @@ pipeline {
         sh 'docker build -t kaioaresi/${NAME_IMG}:${TAG_DEV} .'
       }
     }
-    stage('Docker push') {
-      steps {
-        sh 'docker login -u ${DOCKER_USER} -p ${DOCKER_PASS} ; docker image push kaioaresi/${NAME_IMG}:${TAG_DEV}'
-      }
-    }
     stage('Deploy') {
       steps {
         sh 'docker stack deploy -c docker-compose.yml jenkins_pipeline'
