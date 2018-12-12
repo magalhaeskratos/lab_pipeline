@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'docker stack deploy -c docker-compose.yml jenkins_pipeline'
+        sh 'cat docker-compose.yml'
       }
     }
   }
