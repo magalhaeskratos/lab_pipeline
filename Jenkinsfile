@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'cat docker-compose.yml'
+        sh 'docker stack deploy -c docker-compose.yml teste_lab'
       }
     }
   }
